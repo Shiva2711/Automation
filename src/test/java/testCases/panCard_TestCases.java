@@ -27,7 +27,7 @@ public class panCard_TestCases extends base {
 		Login_TC.loginbutton();
 		log.info("Clicked On Login button");
 
-		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NewPassword"));
+		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NPassword"));
 		log.info("Logged in to the site successfully");
 	}
 

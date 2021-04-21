@@ -28,6 +28,5 @@
 		<classes>
 			<class name="testCases.changePassword_TestCases" />
 		</classes>
-	</test>
-	<!-- Test -->
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

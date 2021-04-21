@@ -79,7 +79,7 @@ public class multipleLogin_TestCases extends base {
 	public Object[][] getData() throws IOException {
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\rshiv\\RB\\RummyBazzi\\src\\main\\java\\resources\\data.properties");
+				"C:\\Users\\rshiv\\rummyBaaziGit\\src\\main\\java\\resources\\data.properties");
 
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
@@ -92,7 +92,7 @@ public class multipleLogin_TestCases extends base {
 		data[0][2] = "New User";
 		
 		data[1][0] = prop.getProperty("NewUser");
-		data[1][1] = prop.getProperty("NewPassword");
+		data[1][1] = prop.getProperty("NPassword");
 		data[1][2] = "Existing User";
 		return data;
 	}

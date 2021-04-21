@@ -38,7 +38,7 @@ public class login_TestCases extends base {
 		log.info("Invalid Username and Password Error Text Display");
 		
 		LoginValidation_TC.clearAll();
-		LoginValidation_TC.getUsernameandPassword(prop.getProperty("NewUser"), prop.getProperty("NewPassword"));
+		LoginValidation_TC.getUsernameandPassword(prop.getProperty("NewUser"), prop.getProperty("NPassword"));
 		log.info("Valid User Login Successful");
 	}
 

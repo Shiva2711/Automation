@@ -26,7 +26,7 @@ public class changePassword_TestCases extends base{
 		Login_TC.loginbutton();
 		log.info("Clicked On Login button");
 		
-		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NewPassword"));
+		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NPassword"));
 		log.info("Logged in to the site successfully");
 	}
 
@@ -61,7 +61,7 @@ public class changePassword_TestCases extends base{
 		log.info("Same Old and New Password Error Message displayed in New Password Field");
 
 		changePassword_TC.clearAll();
-		changePassword_TC.validPasswordChange("Test@123", "Test@1234", "Test@1234");
+		changePassword_TC.validPasswordChange(prop.getProperty("CurrentPassword"), prop.getProperty("NewPassword"), prop.getProperty("ConfirmPassword"));
 		log.info("Password Change Submitted Sucessfully");
 	}
 

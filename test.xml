@@ -6,7 +6,7 @@
 	</listeners>
 	<test thread-count="5" name="Login Validation">
 		<classes>
-			<class name="testCases.loginValidation_TestCases" />
+			<class name="testCases.login_TestCases" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Exisiting and New User Login">
