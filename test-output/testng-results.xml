@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21521" started-at="2021-04-21T15:24:40 IST" finished-at="2021-04-21T15:25:02 IST">
+  <suite name="Default suite" duration-ms="21261" started-at="2021-04-21T16:49:31 IST" finished-at="2021-04-21T16:49:52 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21521" started-at="2021-04-21T15:24:40 IST" finished-at="2021-04-21T15:25:02 IST">
-      <class name="testCases.changePassword_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.changePassword_TestCases@37271612]" name="Login" is-config="true" duration-ms="12508" started-at="2021-04-21T15:24:40 IST" finished-at="2021-04-21T15:24:53 IST">
+    <test name="Default test" duration-ms="21261" started-at="2021-04-21T16:49:31 IST" finished-at="2021-04-21T16:49:52 IST">
+      <class name="com.testCases.changePassword_TestCases">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.changePassword_TestCases@37271612]" name="Login" is-config="true" duration-ms="11971" started-at="2021-04-21T16:49:31 IST" finished-at="2021-04-21T16:49:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="ChangePassword()[pri:0, instance:testCases.changePassword_TestCases@37271612]" name="ChangePassword" duration-ms="8818" started-at="2021-04-21T15:24:53 IST" finished-at="2021-04-21T15:25:01 IST">
+        <test-method status="PASS" signature="ChangePassword()[pri:0, instance:com.testCases.changePassword_TestCases@37271612]" name="ChangePassword" duration-ms="9118" started-at="2021-04-21T16:49:43 IST" finished-at="2021-04-21T16:49:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangePassword -->
-        <test-method status="PASS" signature="after()[pri:0, instance:testCases.changePassword_TestCases@37271612]" name="after" is-config="true" duration-ms="154" started-at="2021-04-21T15:25:01 IST" finished-at="2021-04-21T15:25:02 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.changePassword_TestCases@37271612]" name="after" is-config="true" duration-ms="128" started-at="2021-04-21T16:49:52 IST" finished-at="2021-04-21T16:49:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-      </class> <!-- testCases.changePassword_TestCases -->
+      </class> <!-- com.testCases.changePassword_TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
