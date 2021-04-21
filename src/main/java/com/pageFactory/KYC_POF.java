@@ -75,7 +75,7 @@ public class KYC_POF {
 	 public void wait(WebDriver driver) {
 		 
 		  WebDriverWait wait = new WebDriverWait(driver, 20);
-		  wait.until(ExpectedConditions.visibilityOfElementLocated((By) closebutton));
+		//  wait.until(ExpectedConditions.visibilityOfElementLocated((By) closebutton));
 		 
 	 }
 	 
