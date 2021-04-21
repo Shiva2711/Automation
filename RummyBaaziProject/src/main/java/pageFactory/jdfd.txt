@@ -1,0 +1,107 @@
+package pageFactory;
+
+public class ewe {
+	
+	if (Previous Withdrawal Critiea not equal to empty)) {
+
+		if (IF promoCode not equal to Empty) {
+
+			previousATK					=> Amount To Be Kept As Balance(PREVIOUS) AMOUNT_TO_BE_KEPT
+			coinsMadeSinceLastDeposit   => Coins Made Since Last Deposit(PREVIOUS) ACC_REWARD_COINS
+			previousCoinsToBeMade       => Remaing Coins To Be Earned (PREVIOUS) COINS_TO_BE_MADE
+			balAtTheTimeOfDeposit		=> Real Bal. At The Time Of Deposit(PREVIOUS)
+
+			if ((coinsMadeSinceLastDeposit > previousCoinsToBeMade) || (balAtTheTimeOfDeposit < (0.1 * previousATK))) {
+				newATK = depositAmountToBeConsidered;
+			} else {
+				if (coinsMadeSinceLastDeposit == 0) {
+					ratValue = 0;
+				} else {
+					ratValue = coinsMadeSinceLastDeposit / previousCoinsToBeMade;
+				}
+
+				ratio = 1 - (ratValue);
+				if ((ratio * previousATK) > balAtTheTimeOfDeposit) {
+					newATK = balAtTheTimeOfDeposit + depositAmountToBeConsidered;
+				}  else {
+					newATK = (ratio * previousATK) + depositAmountToBeConsidered;
+				}
+			}
+
+		} else {
+			if ((coinsMadeSinceLastDeposit > previousCoinsToBeMade) || (balAtTheTimeOfDeposit < (0.1 * previousATK))) {
+				newATK = 0;
+			} else {		
+				if (coinsMadeSinceLastDeposit == 0) {
+					ratValue = 0;
+				} else {
+					ratValue = coinsMadeSinceLastDeposit / previousCoinsToBeMade;
+				}
+
+				ratio = 1 - (ratValue);
+
+				if ((ratio * previousATK) > balAtTheTimeOfDeposit) {
+					newATK = balAtTheTimeOfDeposit;
+				} else {
+					newATK = ratio * previousATK;
+				}
+			}
+		}
+	} else {
+		if (PromoCode not equal to Empty) {
+			codeCoins = 0;
+			maxDepositAmount = 0;
+			depositAmountToBeConsidered = 0;
+			codeCoinsToBeConsidered = 0;
+
+
+			if ("COINS REQUIRED" not equal to empty ) {
+				codeCoins = COINS_REQUIRED;
+				maxDepositAmount = MAXIMUM_DEPOSIT_AMOUNT;
+				bonusChipsFlag = P_PROMO_CHIPS;
+				bonusPercentage = P_PROMO_VALUE;
+				depositAmountToBeConsidered = depositAmount;
+				codeCoinsToBeConsidered = codeCoins;
+
+				if (depositAmount > maxDepositAmount) {
+					depositAmountToBeConsidered = maxDepositAmount;
+				}
+				if (bonusChipsFlag == 1) {
+					bonusAmount = round((bonusPercentage / 100) * depositAmountToBeConsidered);
+					if (bonusAmount < codeCoins && bonusAmount != 0) {
+						codeCoinsToBeConsidered = bonusAmount * 1.5;
+					}
+				}
+			}
+
+			if (codeCoinsToBeConsidered == 0) {
+				depositAmountToBeConsidered = 0;
+			}
+
+			coinsMadeSinceLastDeposit = 0;
+		}
+	}
+
+
+
+	If player played game used existing Code
+
+	Sample example:
+
+	32/100 => 0.32
+
+	1-0.32 = 0.68
+
+	if(0.68*600 > 6311458.16){
+		newATK = 6311458.16 + 500;
+	} else {
+		newATK = (0.68 * 600) + 500;
+	}
+
+	newATK => New Amount to be Kept
+
+
+
+	Withdrawal Eligibility  => Deposit + Win - ATK(Amount to be Kept)
+
+}
