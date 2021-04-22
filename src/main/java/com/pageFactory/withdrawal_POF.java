@@ -12,7 +12,7 @@ public class withdrawal_POF {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.LINK_TEXT, using = "Withdrawal")
+	@FindBy(how = How.LINK_TEXT, using = "Withdrawal") ////li[@class ='p-2 pr-3 withdrawal_submenu_color']
 	private WebElement Withdrawal;
 
 	@FindBy(how = How.ID, using = "withdrawAmount")

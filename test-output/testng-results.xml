@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="5" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="5" passed="3">
   <reporter-output>
     <line>
       <![CDATA[RummyBaazi Site Opens]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="137969" started-at="2021-04-21T18:38:44 IST" finished-at="2021-04-21T18:41:02 IST">
+  <suite name="Suite" duration-ms="141663" started-at="2021-04-22T17:56:48 IST" finished-at="2021-04-22T17:59:10 IST">
     <groups>
     </groups>
-    <test name="Login" duration-ms="12236" started-at="2021-04-21T18:38:44 IST" finished-at="2021-04-21T18:38:56 IST">
+    <test name="Login" duration-ms="22602" started-at="2021-04-22T17:56:48 IST" finished-at="2021-04-22T17:57:11 IST">
       <class name="com.testCases.login_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.login_TestCases@431cd9b2]" name="Login" duration-ms="12079" started-at="2021-04-21T18:38:44 IST" finished-at="2021-04-21T18:38:56 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.login_TestCases@5e7cd6cc]" name="Login" duration-ms="22430" started-at="2021-04-22T17:56:48 IST" finished-at="2021-04-22T17:57:11 IST">
           <reporter-output>
             <line>
               <![CDATA[RummyBaazi Site Opens]]>
             </line>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.login_TestCases@431cd9b2]" name="after" is-config="true" duration-ms="98" started-at="2021-04-21T18:38:56 IST" finished-at="2021-04-21T18:38:56 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.login_TestCases@5e7cd6cc]" name="after" is-config="true" duration-ms="121" started-at="2021-04-22T17:57:11 IST" finished-at="2021-04-22T17:57:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- com.testCases.login_TestCases -->
     </test> <!-- Login -->
-    <test name="profile" duration-ms="28075" started-at="2021-04-21T18:38:56 IST" finished-at="2021-04-21T18:39:25 IST">
+    <test name="profile" duration-ms="40490" started-at="2021-04-22T17:57:11 IST" finished-at="2021-04-22T17:57:52 IST">
       <class name="com.testCases.profile_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.profile_TestCases@23f5b5dc]" name="Login" is-config="true" duration-ms="7499" started-at="2021-04-21T18:38:56 IST" finished-at="2021-04-21T18:39:04 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.profile_TestCases@7857fe2]" name="Login" is-config="true" duration-ms="14304" started-at="2021-04-22T17:57:11 IST" finished-at="2021-04-22T17:57:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="FAIL" signature="Profile()[pri:0, instance:com.testCases.profile_TestCases@23f5b5dc]" name="Profile" duration-ms="20057" started-at="2021-04-21T18:39:04 IST" finished-at="2021-04-21T18:39:24 IST">
+        <test-method status="FAIL" signature="Profile()[pri:0, instance:com.testCases.profile_TestCases@7857fe2]" name="Profile" duration-ms="21825" started-at="2021-04-22T17:57:26 IST" finished-at="2021-04-22T17:57:48 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Profile"}
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userProfileSubmit"}
   (Session info: chrome=90.0.4430.85)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55372}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1639687fe7af3e82d1b74782596aa9ed
-*** Element info: {Using=link text, value=Profile}]]>
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 274436219872cdbfed684be794e...}
+Session ID: 274436219872cdbfed684be794ec8a24
+*** Element info: {Using=id, value=userProfileSubmit}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Profile"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#userProfileSubmit"}
   (Session info: chrome=90.0.4430.85)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55372}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1639687fe7af3e82d1b74782596aa9ed
-*** Element info: {Using=link text, value=Profile}
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 274436219872cdbfed684be794e...}
+Session ID: 274436219872cdbfed684be794ec8a24
+*** Element info: {Using=id, value=userProfileSubmit}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -60,17 +60,16 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
-at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy27.click(Unknown Source)
-at com.pageFactory.profile_POF.gotoProfile(profile_POF.java:85)
-at com.testCases.profile_TestCases.Profile(profile_TestCases.java:38)
+at com.pageFactory.profile_POF.emptyFieldAlert(profile_POF.java:89)
+at com.testCases.profile_TestCases.Profile(profile_TestCases.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -105,148 +104,49 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Profile -->
-        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.profile_TestCases@23f5b5dc]" name="after" is-config="true" duration-ms="1" started-at="2021-04-21T18:39:25 IST" finished-at="2021-04-21T18:39:25 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.profile_TestCases@7857fe2]" name="after" is-config="true" duration-ms="4139" started-at="2021-04-22T17:57:48 IST" finished-at="2021-04-22T17:57:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- com.testCases.profile_TestCases -->
     </test> <!-- profile -->
-    <test name="deposit" duration-ms="32968" started-at="2021-04-21T18:39:25 IST" finished-at="2021-04-21T18:39:58 IST">
+    <test name="deposit" duration-ms="26099" started-at="2021-04-22T17:57:52 IST" finished-at="2021-04-22T17:58:18 IST">
       <class name="com.testCases.deposite_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.deposite_TestCases@7857fe2]" name="Login" is-config="true" duration-ms="8347" started-at="2021-04-21T18:39:25 IST" finished-at="2021-04-21T18:39:33 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.deposite_TestCases@5340477f]" name="Login" is-config="true" duration-ms="14994" started-at="2021-04-22T17:57:52 IST" finished-at="2021-04-22T17:58:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="FAIL" signature="Deposit()[pri:0, instance:com.testCases.deposite_TestCases@7857fe2]" name="Deposit" duration-ms="20063" started-at="2021-04-21T18:39:33 IST" finished-at="2021-04-21T18:39:53 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Deposit"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f6628021d17ca542b347d35e24c91f0d
-*** Element info: {Using=link text, value=Deposit}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Deposit"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f6628021d17ca542b347d35e24c91f0d
-*** Element info: {Using=link text, value=Deposit}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
-at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy27.click(Unknown Source)
-at com.pageFactory.deposit_POF.addcashClick(deposit_POF.java:43)
-at com.testCases.deposite_TestCases.Deposit(deposite_TestCases.java:37)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="Deposit()[pri:0, instance:com.testCases.deposite_TestCases@5340477f]" name="Deposit" duration-ms="10983" started-at="2021-04-22T17:58:07 IST" finished-at="2021-04-22T17:58:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deposit -->
-        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.deposite_TestCases@7857fe2]" name="after" is-config="true" duration-ms="4090" started-at="2021-04-21T18:39:53 IST" finished-at="2021-04-21T18:39:58 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.deposite_TestCases@5340477f]" name="after" is-config="true" duration-ms="117" started-at="2021-04-22T17:58:18 IST" finished-at="2021-04-22T17:58:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- com.testCases.deposite_TestCases -->
     </test> <!-- deposit -->
-    <test name="withdrawal" duration-ms="31111" started-at="2021-04-21T18:39:58 IST" finished-at="2021-04-21T18:40:29 IST">
+    <test name="withdrawal" duration-ms="21797" started-at="2021-04-22T17:58:18 IST" finished-at="2021-04-22T17:58:40 IST">
       <class name="com.testCases.withdrawal_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.withdrawal_TestCases@5340477f]" name="Login" is-config="true" duration-ms="6532" started-at="2021-04-21T18:39:58 IST" finished-at="2021-04-21T18:40:04 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.withdrawal_TestCases@126253fd]" name="Login" is-config="true" duration-ms="17813" started-at="2021-04-22T17:58:18 IST" finished-at="2021-04-22T17:58:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="FAIL" signature="Withdrawal()[pri:0, instance:com.testCases.withdrawal_TestCases@5340477f]" name="Withdrawal" duration-ms="20046" started-at="2021-04-21T18:40:04 IST" finished-at="2021-04-21T18:40:24 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="Withdrawal()[pri:0, instance:com.testCases.withdrawal_TestCases@126253fd]" name="Withdrawal" duration-ms="3715" started-at="2021-04-22T17:58:36 IST" finished-at="2021-04-22T17:58:40 IST">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Withdrawal"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d4ad558fd2fd60122efac931e0956ead
-*** Element info: {Using=link text, value=Withdrawal}]]>
+              <![CDATA[expected [Enter the Amount less than 30000] but found [You do not have sufficient Withdrawable balance.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Withdrawal"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d4ad558fd2fd60122efac931e0956ead
-*** Element info: {Using=link text, value=Withdrawal}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
-at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy27.click(Unknown Source)
-at com.pageFactory.withdrawal_POF.clickWithdrwal(withdrawal_POF.java:28)
-at com.testCases.withdrawal_TestCases.Withdrawal(withdrawal_TestCases.java:37)
+              <![CDATA[java.lang.AssertionError: expected [Enter the Amount less than 30000] but found [You do not have sufficient Withdrawable balance.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.pageFactory.withdrawal_POF.maxAmountValidation(withdrawal_POF.java:38)
+at com.testCases.withdrawal_TestCases.Withdrawal(withdrawal_TestCases.java:43)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -277,99 +177,27 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Withdrawal -->
-        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.withdrawal_TestCases@5340477f]" name="after" is-config="true" duration-ms="4079" started-at="2021-04-21T18:40:25 IST" finished-at="2021-04-21T18:40:29 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.withdrawal_TestCases@126253fd]" name="after" is-config="true" duration-ms="77" started-at="2021-04-22T17:58:40 IST" finished-at="2021-04-22T17:58:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- com.testCases.withdrawal_TestCases -->
     </test> <!-- withdrawal -->
-    <test name="changePassword" duration-ms="32890" started-at="2021-04-21T18:40:29 IST" finished-at="2021-04-21T18:41:02 IST">
+    <test name="changePassword" duration-ms="29822" started-at="2021-04-22T17:58:40 IST" finished-at="2021-04-22T17:59:10 IST">
       <class name="com.testCases.changePassword_TestCases">
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.changePassword_TestCases@126253fd]" name="Login" is-config="true" duration-ms="8185" started-at="2021-04-21T18:40:29 IST" finished-at="2021-04-21T18:40:37 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.testCases.changePassword_TestCases@1b919693]" name="Login" is-config="true" duration-ms="17024" started-at="2021-04-22T17:58:40 IST" finished-at="2021-04-22T17:58:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="FAIL" signature="ChangePassword()[pri:0, instance:com.testCases.changePassword_TestCases@126253fd]" name="ChangePassword" duration-ms="20122" started-at="2021-04-21T18:40:37 IST" finished-at="2021-04-21T18:40:57 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Profile"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55703}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 70898fd3f657fd6c7fcc6fe527668a69
-*** Element info: {Using=link text, value=Profile}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Profile"}
-  (Session info: chrome=90.0.4430.85)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-FET714UI', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\rshiv\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55703}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 70898fd3f657fd6c7fcc6fe527668a69
-*** Element info: {Using=link text, value=Profile}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
-at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy27.click(Unknown Source)
-at com.pageFactory.changePassword_POF.Profileclick(changePassword_POF.java:48)
-at com.testCases.changePassword_TestCases.ChangePassword(changePassword_TestCases.java:38)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="ChangePassword()[pri:0, instance:com.testCases.changePassword_TestCases@1b919693]" name="ChangePassword" duration-ms="12505" started-at="2021-04-22T17:58:57 IST" finished-at="2021-04-22T17:59:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangePassword -->
-        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.changePassword_TestCases@126253fd]" name="after" is-config="true" duration-ms="4091" started-at="2021-04-21T18:40:58 IST" finished-at="2021-04-21T18:41:02 IST">
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.changePassword_TestCases@1b919693]" name="after" is-config="true" duration-ms="288" started-at="2021-04-22T17:59:10 IST" finished-at="2021-04-22T17:59:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->

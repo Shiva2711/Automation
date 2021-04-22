@@ -52,7 +52,7 @@ public class deposit_POF {
 	public void maxamountValidation ( ) {
 		userAmount.sendKeys("100000");
 		addCash.click();
-		Assert.assertEquals(userAmounterror.getText(), "Enter the Amount less than 50000.00");
+		Assert.assertEquals(userAmounterror.getText(), "Enter the Amount less than 1000.00"); //pro = 50000.00, preprod = 1000.00
 	}
 	
 	public void invalidBonusCode() {

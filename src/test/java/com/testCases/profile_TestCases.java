@@ -89,6 +89,6 @@ public class profile_TestCases extends base {
 
 	@AfterTest
 	public void after() {
-		// driver.close();
+		driver.close();
 	}
 }
