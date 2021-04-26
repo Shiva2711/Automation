@@ -6,8 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class changePassword_POF {
+
+	SoftAssert softAssert = new SoftAssert();
 
 	public changePassword_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -55,31 +58,31 @@ public class changePassword_POF {
 
 	public void emptyField() {
 		submitChangePassword.click();
-		Assert.assertEquals(currentPassworderror.getText(), "Enter Your Current Password");
-		Assert.assertEquals(newPassworderror.getText(), "Enter Your New Password");
-		Assert.assertEquals(confirmPassworderror.getText(), "Enter Your Confirm Password");
+		softAssert.assertEquals(currentPassworderror.getText(), "Enter Your Current Password");
+		softAssert.assertEquals(newPassworderror.getText(), "Enter Your New Password");
+		softAssert.assertEquals(confirmPassworderror.getText(), "Enter Your Confirm Password");
 	}
 
 	public void invalidCurrentPassword() {
 		currentPassword.sendKeys("Test");
 		submitChangePassword.click();
-		Assert.assertEquals(currentPassworderror.getText(), "Invalid Current Password!");
+		softAssert.assertEquals(currentPassworderror.getText(), "Invalid Current Password!");
 	}
 
 	public void lessThan8Char() {
 		newPassword.sendKeys("Test");
 		confirmPassword.sendKeys("Test");
 		submitChangePassword.click();
-		Assert.assertEquals(newPassworderror.getText(), "Password must contain 8-16 characters");
-		Assert.assertEquals(confirmPassworderror.getText(), "Password must contain 8-16 characters");
+		softAssert.assertEquals(newPassworderror.getText(), "Password must contain 8-16 characters");
+		softAssert.assertEquals(confirmPassworderror.getText(), "Password must contain 8-16 characters");
 	}
 
 	public void wrongPasswordFormat() {
 		newPassword.sendKeys("Test1234");
 		confirmPassword.sendKeys("Test1234");
 		submitChangePassword.click();
-		Assert.assertEquals(newPassworderror.getText(), "Enter password in correct format(Ex: Google@123)");
-		Assert.assertEquals(confirmPassworderror.getText(), "Enter password in correct format(Ex: Google@123)");
+		softAssert.assertEquals(newPassworderror.getText(), "Enter password in correct format(Ex: Google@123)");
+		softAssert.assertEquals(confirmPassworderror.getText(), "Enter password in correct format(Ex: Google@123)");
 	}
 
 	public void sameOldandNewPassword() {
@@ -87,7 +90,7 @@ public class changePassword_POF {
 		newPassword.sendKeys("Test@1234");
 		confirmPassword.sendKeys("Test@12345");
 		submitChangePassword.click();
-		Assert.assertEquals(confirmPassworderror.getText(), "New & Confirm Password should does not match!");
+		softAssert.assertEquals(confirmPassworderror.getText(), "New & Confirm Password should does not match!");
 	}
 
 	public void clearAll() {
@@ -97,11 +100,15 @@ public class changePassword_POF {
 	}
 
 	public void validPasswordChange(String currentPassword, String newPassword, String confirmPassword) {
-		
+
 		this.currentPassword.sendKeys(currentPassword);
 		this.newPassword.sendKeys(newPassword);
 		this.confirmPassword.sendKeys(confirmPassword);
 		submitChangePassword.click();
+	}
+
+	public void softAsssertAll() {
+		softAssert.assertAll();
 	}
 
 }

@@ -4,17 +4,6 @@
   <listeners>
     <listener class-name="com.listenersBase.listeners"/>
   </listeners>
-  <test thread-count="5" name="profile(failed)">
-    <classes>
-      <class name="com.testCases.profile_TestCases">
-        <methods>
-          <include name="after"/>
-          <include name="Login"/>
-          <include name="Profile"/>
-        </methods>
-      </class> <!-- com.testCases.profile_TestCases -->
-    </classes>
-  </test> <!-- profile(failed) -->
   <test thread-count="5" name="withdrawal(failed)">
     <classes>
       <class name="com.testCases.withdrawal_TestCases">

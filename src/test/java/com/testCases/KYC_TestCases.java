@@ -52,6 +52,8 @@ public class KYC_TestCases extends base  {
 	  KYC_TC.submitAadhaarProof();
 	  log.info("Aadhar submited");
 	  
+	  KYC_TC.softAssertAll();
+	  
   }
   
   @AfterTest

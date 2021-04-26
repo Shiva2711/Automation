@@ -85,6 +85,8 @@ public class profile_TestCases extends base {
 
 		// profile_TC.submitProfile();
 		log.info("Submited the Profile");
+		
+		profile_TC.softAssertAll();
 	}
 
 	@AfterTest

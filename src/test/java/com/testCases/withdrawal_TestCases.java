@@ -26,7 +26,7 @@ public class withdrawal_TestCases extends base {
 		Login_TC.loginbutton();
 		log.info("Clicked On Login button");
 		
-		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NPassword"));
+		Login_TC.loginAction(prop.getProperty("ExistingUser"), prop.getProperty("ExistingPassword"));
 		log.info("Logged in to the site successfully");
 	}
 
@@ -50,6 +50,8 @@ public class withdrawal_TestCases extends base {
 		withdrawal_TC.clearAmount();
 		withdrawal_TC.validAmountWithdraw("100");
 		log.info("Amount Withdraw Successfully");
+		
+		withdrawal_TC.softAssertAll();
 	}
 	
 	@AfterTest

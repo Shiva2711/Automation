@@ -63,6 +63,8 @@ public class changePassword_TestCases extends base{
 		changePassword_TC.clearAll();
 		changePassword_TC.validPasswordChange(prop.getProperty("CurrentPassword"), prop.getProperty("NewPassword"), prop.getProperty("ConfirmPassword"));
 		log.info("Password Change Submitted Sucessfully");
+		
+		changePassword_TC.softAsssertAll();
 	}
 
 	@AfterTest

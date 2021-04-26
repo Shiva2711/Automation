@@ -6,8 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class deposit_POF {
+	
+	SoftAssert softAssert = new SoftAssert();
+	
 	public deposit_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -45,20 +49,20 @@ public class deposit_POF {
 	public void emptyfiledClick( ) {
 		
 		addCash.click();
-		Assert.assertEquals(userAmounterror.getText(), "Enter the Amount");
-		Assert.assertEquals(agreeerror.getText(), "Please agree terms & condition");
+		softAssert.assertEquals(userAmounterror.getText(), "Enter the Amount");
+		softAssert.assertEquals(agreeerror.getText(), "Please agree terms & condition");
 	}
 	
 	public void maxamountValidation ( ) {
 		userAmount.sendKeys("100000");
 		addCash.click();
-		Assert.assertEquals(userAmounterror.getText(), "Enter the Amount less than 1000.00"); //pro = 50000.00, preprod = 1000.00
+		softAssert.assertEquals(userAmounterror.getText(), "Enter the Amount less than 50000.00"); //pro = 50000.00, preprod = 1000.00
 	}
 	
 	public void invalidBonusCode() {
 		user_bonus_code.sendKeys("DemoDemo");
 		addCash.click();
-		Assert.assertEquals(user_bonus_codeerror.getText(), "Bonus code is not valid");
+		softAssert.assertEquals(user_bonus_codeerror.getText(), "Bonus code is not valid");
 		
 	}
 	
@@ -71,6 +75,10 @@ public class deposit_POF {
 		paymentType.click();
 		agree.click();
 		addCash.click();
+		
 	}
-
+	
+	public void softAsssertAll() {
+		softAssert.assertAll();
+	}
 }

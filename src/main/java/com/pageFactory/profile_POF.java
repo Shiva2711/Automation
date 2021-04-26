@@ -9,10 +9,12 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class profile_POF {
 	public static Logger log = LogManager.getLogger(profile_POF.class.getName());
-	public WebDriver driver;
+	SoftAssert softAssert = new SoftAssert();
+	
 	public profile_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -87,28 +89,28 @@ public class profile_POF {
 	 
 	 public void emptyFieldAlert() {
 		 userProfileSubmit.click();
-		 Assert.assertEquals(fullnameerror.getText(), "Enter Your Full Name");
+		 softAssert.assertEquals(fullnameerror.getText(), "Enter Your Full Name");
 		 log.info("Enter Your Full Name Alert Displayed");
 		 
-		 Assert.assertEquals(lastnameerror.getText(), "Enter Your Last Name");
+		 softAssert.assertEquals(lastnameerror.getText(), "Enter Your Last Name");
 		 log.info("Enter Your Last Name Alert Displayed");
 		 
-		 Assert.assertEquals(gendererror.getText(), "Select Your Gender");
+		 softAssert.assertEquals(gendererror.getText(), "Select Your Gender");
 		 log.info("Select Your Gender Alert Displayed");
 		 
-		 Assert.assertEquals(address1error.getText(), "Enter Your Address Line 1");
+		 softAssert.assertEquals(address1error.getText(), "Enter Your Address Line 1");
 		 log.info("Enter Your Address Line 1 Alert Displayed");
 		
-		 Assert.assertEquals(address2error.getText(), "Enter Your Address Line 2");
+		 softAssert.assertEquals(address2error.getText(), "Enter Your Address Line 2");
 		 log.info("Enter Your Address Line 2 Alert Displayed");
 		 
-		 Assert.assertEquals(stateerror.getText(), "Enter Your State");
+		 softAssert.assertEquals(stateerror.getText(), "Enter Your State");
 		 log.info("Enter Your State Alert Displayed");
 		 
-		 Assert.assertEquals(cityerror.getText(), "Enter Your City");
+		 softAssert.assertEquals(cityerror.getText(), "Enter Your City");
 		 log.info("Enter Your City Alert Displayed");
 		 
-		 Assert.assertEquals(pincodeerror.getText(), "Enter Your Pincode");
+		 softAssert.assertEquals(pincodeerror.getText(), "Enter Your Pincode");
 		 log.info("Enter Your Pincode Alert Displayed");
 	 }
 	 
@@ -200,6 +202,10 @@ public class profile_POF {
 	 
 	 public void submitProfile() {
 		 userProfileSubmit.click();
+	 }
+	 
+	 public void softAssertAll() {
+		 softAssert.assertAll();
 	 }
 
 }

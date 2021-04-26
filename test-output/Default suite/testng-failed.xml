@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testCases.withdrawal_TestCases">
+      <class name="com.Practice.brokenLinks">
         <methods>
-          <include name="Withdrawal"/>
-          <include name="Login"/>
-          <include name="after"/>
+          <include name="afterTest"/>
+          <include name="f1"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.testCases.withdrawal_TestCases -->
+      </class> <!-- com.Practice.brokenLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

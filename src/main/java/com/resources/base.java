@@ -19,12 +19,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.asserts.SoftAssert;
 
 public class base {
 	public WebDriver driver;
 	public Properties prop;
 	public static Logger log = LogManager.getLogger(base.class.getName());
 	public DesiredCapabilities dc;
+	public SoftAssert softAssert = new SoftAssert();
 
 	public WebDriver intializeDriver() throws IOException {
 

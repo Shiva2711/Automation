@@ -12,8 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class KYC_POF {
+	
+	SoftAssert softAssert = new SoftAssert();
 
 	public KYC_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -69,7 +72,7 @@ public class KYC_POF {
 	 }
 	 
 	 public void submittedMessagePopUp() {
-		 Assert.assertEquals(aadhaarSubmited.get(0).getText(), "Aadhaar Request Id Not Regenerated");
+		 softAssert.assertEquals(aadhaarSubmited.get(0).getText(), "Aadhaar Request Id Not Regenerated");
 	 }
 	 
 	 public void wait(WebDriver driver) {
@@ -83,4 +86,9 @@ public class KYC_POF {
 		 
 		 closebutton.get(1).click();
 	 }
+	 
+	 public void softAssertAll() {
+		 softAssert.assertAll();
+	 }
+	 
 }

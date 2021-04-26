@@ -52,6 +52,8 @@ public class deposite_TestCases extends base {
 
 		deposit_TC.validDeposit("100");
 		log.info("Valid Deposit Amount, redirected to payment Gateway");
+		
+		deposit_TC.softAsssertAll();
 
 	}
 	
