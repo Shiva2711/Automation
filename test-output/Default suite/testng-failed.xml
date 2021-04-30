@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Practice.brokenLinks">
+      <class name="com.streams.getPrice3">
         <methods>
           <include name="afterTest"/>
-          <include name="f1"/>
           <include name="beforeTest"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.Practice.brokenLinks -->
+      </class> <!-- com.streams.getPrice3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
