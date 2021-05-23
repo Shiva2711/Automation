@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DB.jdbcConnection">
+      <class name="com.Practice.extentReport">
         <methods>
-          <include name="m"/>
+          <include name="test"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- com.DB.jdbcConnection -->
+      </class> <!-- com.Practice.extentReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
