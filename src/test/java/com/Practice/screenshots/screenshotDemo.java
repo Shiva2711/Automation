@@ -1,4 +1,4 @@
-package com.Practice;
+package com.Practice.screenshots;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class screenshotDemo {
 	@Test
 	public void f() throws IOException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\git\\RummyBaaziProject\\lib\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 

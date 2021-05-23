@@ -40,7 +40,7 @@ public class switchtoGameLobby_TestCases extends base {
 		log.info("Logged in to the site successfully");
 	}
 
-	@Test
+	//@Test
 	public void switchToGameLobby() {
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -52,7 +52,7 @@ public class switchtoGameLobby_TestCases extends base {
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("button[@class ='btn foot-instantplaybtn']")));
 
-		gameLobby_TC.instantPlay().click();
+		gameLobby_TC.instantPlay();
 		log.info("Clicked on the instant play");
 
 		Set<String> windows = driver.getWindowHandles();
@@ -66,6 +66,86 @@ public class switchtoGameLobby_TestCases extends base {
 		softAssert.assertEquals(gameLobby_TC.lobbygameinfo().getText(), "Game Information");
 		log.info("Move to Lobby Window and get the text: " +gameLobby_TC.lobbygameinfo().getText());
 	
+	}
+	
+	@Test
+	public void gotoGameLobby() throws InterruptedException {
+		driver.get("https://www.rummybaazi.com/lobby/index.html?v=1621244149659#!/app/lobby");
+		
+		Thread.sleep(16000);
+
+		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> it = windows.iterator();
+
+		String Lobby = it.next();
+		String promotion = it.next();
+
+		driver.switchTo().window(promotion).close();
+		log.info("Closed Promotion Window");
+
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		
+		gameLobby_TC.humburger().click();
+		log.info("Click on HamburgerMenu");
+		
+		gameLobby_TC.MyRewards().click();
+		log.info("Clicked on My Rewards");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		
+		gameLobby_TC.ReferandEarn().click();
+		log.info("Clicked on Refer and Earn");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		
+		gameLobby_TC.ReedemCode().click();
+		log.info("Clicked on Reedem Code");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		
+		gameLobby_TC.MidStakeMania().click();
+		log.info("Clicked on Mid Stake Mania");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		gameLobby_TC.Promotion().click();
+		log.info("Clicked on Promotion");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		gameLobby_TC.changePassword();
+		log.info("Clicked on Change Password");
+		gameLobby_TC.changePasswordClose().click();
+		log.info("Closed Changed Password Popup");
+		
+		gameLobby_TC.humburger().click();
+		log.info("Click on HamburgerMenu");
+		gameLobby_TC.InviteandEarn().click();
+		log.info("Clicked on Invite and Earn");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		gameLobby_TC.GameRules().click();
+		log.info("Clicked on Game Rule");
+		
+		driver.switchTo().window(Lobby);
+		log.info("Switched to lobby window");
+		gameLobby_TC.Logout();
+		log.info("Clicked on Logout");
+		gameLobby_TC.cancel();
+		log.info("Clicked on Logout");
+		
+		gameLobby_TC.humburger().click();
+		log.info("Click on HamburgerMenu");
+		gameLobby_TC.Logout();
+		log.info("Clicked on Logout");
+		gameLobby_TC.okay();
+		log.info("Clicked on Okay");	
+		
 	}
 	
 	@AfterTest

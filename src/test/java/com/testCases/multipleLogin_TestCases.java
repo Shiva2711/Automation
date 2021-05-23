@@ -79,8 +79,11 @@ public class multipleLogin_TestCases extends base {
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				"C:\\Users\\rshiv\\rummyBaaziGit\\src\\main\\java\\resources\\data.properties");
+		
+		
 
 		prop.load(fis);
+		
 		String browserName = prop.getProperty("browser");
 		log.info(browserName);
 		

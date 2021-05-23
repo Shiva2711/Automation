@@ -34,8 +34,8 @@ public class panCard_TestCases extends base {
 	@Test
 	public void f() {
 		panCard_TC = PageFactory.initElements(driver, panCard_POF.class);
-		panCard_TC.panAction("511498108178", "C:\\Users\\rshiv\\Pictures\\Screenshots\\Image 3",
-				"C:\\Users\\rshiv\\Pictures\\Screenshots\\Image 3");
+		panCard_TC.panAction("ADFGK4567F", "C:\\Users\\rshiv\\Pictures\\Sample Aadhar\\Front.jpg",
+				"C:\\Users\\rshiv\\Pictures\\Sample Aadhar\\Back.png");
 	}
 
 	@AfterTest

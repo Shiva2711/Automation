@@ -22,7 +22,7 @@ public class brokenLinks {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\git\\RummyBaaziProject\\lib\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.rummybaazi.com/");
 	}

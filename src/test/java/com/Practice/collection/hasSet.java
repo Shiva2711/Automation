@@ -23,7 +23,6 @@ public class hasSet {
 		System.out.println(h);
 
 		Iterator<String> it = h.iterator();
-
 		System.out.println(it.next());
 		System.out.println(it.next());
 

@@ -83,7 +83,7 @@ public class profile_TestCases extends base {
 		profile_TC.validPincode("123456");
 		log.info("Entered valid Pincode");
 
-		// profile_TC.submitProfile();
+		profile_TC.submitProfile();
 		log.info("Submited the Profile");
 		
 		profile_TC.softAssertAll();

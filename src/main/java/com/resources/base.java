@@ -33,8 +33,7 @@ public class base {
 		dc = new DesiredCapabilities();
 		dc.setPlatform(Platform.WINDOWS);
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\rshiv\\rummyBaaziGit\\src\\main\\java\\com\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//com//resources//data.properties");
 
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
@@ -50,7 +49,7 @@ public class base {
 
 		else if (browserName.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//lib//chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 
@@ -60,7 +59,7 @@ public class base {
 		}
 
 		else if (browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//lib//geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 
@@ -70,7 +69,7 @@ public class base {
 		}
 
 		else if (browserName.equals("edge")) {
-			System.setProperty("webdriver.edge.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "//lib//msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 
