@@ -19,6 +19,7 @@ public class login_TestCases extends base {
 		driver = intializeDriver();
 		driver.get(prop.getProperty("url"));
 		Reporter.log("RummyBaazi Site Opens");
+		
 
 		LoginValidation_TC = new loginValidation_POF(driver);
 

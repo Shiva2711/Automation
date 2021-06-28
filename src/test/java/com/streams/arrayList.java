@@ -3,6 +3,7 @@ package com.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -92,13 +93,19 @@ public class arrayList {
 		List<String> ls = Stream.of("Ashok", "Jeevitha", "Sanjay", "Arjun", "Kavitha").filter(s -> s.endsWith("a"))
 				.map(s -> s.toUpperCase()).collect(Collectors.toList());
 
-		System.out.println(ls.get(0));
+		//System.out.println(ls.get(0));
 
 		List<Integer> numbers = Arrays.asList(3, 3, 2, 2, 1, 3, 2, 4, 5);
-		numbers.stream().distinct().forEach(s -> System.out.println(s));
+		//numbers.stream().distinct().forEach(s -> System.out.println(s));
 
 		List<Integer> li = numbers.stream().distinct().sorted().collect(Collectors.toList());
-		System.out.println(li.get(2));
+		System.out.println(li.get(1));
+		
+		Collections.reverse(li);
+		System.out.println(li);
+		
+		List<Integer> sol =numbers.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		System.out.println(sol.get(1));
 	}
 
 }

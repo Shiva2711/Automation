@@ -27,6 +27,7 @@ public class base {
 	public static Logger log = LogManager.getLogger(base.class.getName());
 	public DesiredCapabilities dc;
 	public SoftAssert softAssert = new SoftAssert();
+	
 
 	public WebDriver intializeDriver() throws IOException {
 
@@ -49,7 +50,7 @@ public class base {
 
 		else if (browserName.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//lib//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 
@@ -79,6 +80,7 @@ public class base {
 		return driver;
 
 	}
+
 
 	public String getSceenShotPath(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;

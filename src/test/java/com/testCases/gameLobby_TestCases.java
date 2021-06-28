@@ -33,7 +33,7 @@ public class gameLobby_TestCases extends base {
 		Login_TC.loginbutton();
 		log.info("Clicked On Login button");
 
-		Login_TC.loginAction(prop.getProperty("NewUser"), prop.getProperty("NPassword"));
+		Login_TC.loginAction(prop.getProperty("ExistingUser"), prop.getProperty("ExistingPassword"));
 		log.info("Logged in to the site successfully");
 	}
 
@@ -48,9 +48,9 @@ public class gameLobby_TestCases extends base {
 		Iterator<String> it = windows.iterator();
 
 		String Lobby = it.next();
-		String promotion = it.next();
+		//String promotion = it.next();
 
-		driver.switchTo().window(promotion).close();
+		//driver.switchTo().window(promotion).close();
 
 		driver.switchTo().window(Lobby);
 

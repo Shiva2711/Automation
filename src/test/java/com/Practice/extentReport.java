@@ -28,6 +28,7 @@ public class extentReport {
 		extent.attachReporter(reporter);
 		
 		extent.setSystemInfo("Tester", "Siva Chandran R");
+		
 
 	}
 	
@@ -43,7 +44,6 @@ public class extentReport {
 		System.out.println(driver.getTitle());
 		driver.close();
 		test.fail("Result do not match");
-		
 		extent.flush();
 	}
 

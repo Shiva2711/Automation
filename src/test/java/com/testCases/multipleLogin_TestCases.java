@@ -46,7 +46,7 @@ public class multipleLogin_TestCases extends base {
 	//	ExtentTest test= extent.createTest("Initial Demo");
 		
 		driver = intializeDriver();
-
+		
 		driver.get(prop.getProperty("url"));
 		log.info("Site URL Launced");
 		log.debug("Debug");
