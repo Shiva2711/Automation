@@ -1,5 +1,6 @@
 package com.Practice;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,17 +25,21 @@ public class webTables {
 
 		List<WebElement> heading = driver.findElements(By.xpath("//div[@class='rt-resizable-header-content']"));
 
-		heading.stream().filter(s -> s.getText().contains("LastName")).map(s -> LastNameList(s)).forEach(s->System.out.println(s));
-
+		List<List<String>> LastNamelist1 = heading.stream().filter(s -> s.getText().contains("LastName"))
+				.map(s -> LastNameList(s)).collect(Collectors.toList());
 		
+		System.out.println(LastNamelist1);
+		//System.out.println(Arrays.asList(LastNamelist1));
+
 	}
 
 	private List<String> LastNameList(WebElement s) {
 
-		List<WebElement> Lastnamelist = s.findElements(
-				By.xpath("parent::div/parent::div/parent::div/following-sibling::div//div[@role='gridcell'][2]"));
+		List<WebElement> Lastnamelist = s.findElements(By.xpath(
+				"parent::div/parent::div/parent::div/following-sibling::div//div[@role='gridcell' and text()][2]"));
 
 		List<String> k = Lastnamelist.stream().map(a -> a.getText()).collect(Collectors.toList());
+		System.out.println(k);
 		return k;
 	}
 

@@ -1,9 +1,11 @@
 package com.Practice2;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.collections4.comparators.ReverseComparator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -72,7 +74,7 @@ public class Streams {
 		System.out.println(count);
 	}
 	
-	@Test
+	//@Test
 	public void f5() {
 		WebDriver driver = new ChromeDriver();
 		System.setProperty("webriver.chrome.driver", ("user.dir") + "/chromedriver.exe");
@@ -97,5 +99,18 @@ public class Streams {
 		 
 		
 		driver.quit();
+	}
+	
+	@Test
+	public void f6() {
+		
+		int a[] = {1,2,4,5,6,8};
+		
+		List<Integer> b = Arrays.asList(1,2,4,5,6,8);
+		
+		List<Integer> c = b.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		System.out.println(c.get(1));
+		
+		
 	}
 }

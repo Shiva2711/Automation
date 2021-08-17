@@ -15,4 +15,26 @@
       </class> <!-- com.testCases.profile_TestCases -->
     </classes>
   </test> <!-- profile(failed) -->
+  <test thread-count="5" name="withdrawal(failed)">
+    <classes>
+      <class name="com.testCases.withdrawal_TestCases">
+        <methods>
+          <include name="Withdrawal"/>
+          <include name="Login"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- com.testCases.withdrawal_TestCases -->
+    </classes>
+  </test> <!-- withdrawal(failed) -->
+  <test thread-count="5" name="changePassword(failed)">
+    <classes>
+      <class name="com.testCases.changePassword_TestCases">
+        <methods>
+          <include name="Login"/>
+          <include name="after"/>
+          <include name="ChangePassword"/>
+        </methods>
+      </class> <!-- com.testCases.changePassword_TestCases -->
+    </classes>
+  </test> <!-- changePassword(failed) -->
 </suite> <!-- Failed suite [Suite] -->

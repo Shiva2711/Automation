@@ -1,5 +1,6 @@
 package com.pageFactory;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,9 +12,11 @@ import org.testng.asserts.SoftAssert;
 public class withdrawal_POF {
 
 	SoftAssert softAssert = new SoftAssert();
+	JavascriptExecutor jse;
 
 	public withdrawal_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		jse= (JavascriptExecutor)driver;
 	}
 
 	@FindBy(how = How.LINK_TEXT, using = "Withdrawal") //// li[@class ='p-2 pr-3 withdrawal_submenu_color']
@@ -33,19 +36,20 @@ public class withdrawal_POF {
 	}
 
 	public void emptyAmount() {
-		continueButton.click();
+		jse.executeScript("arguments[0].click();", continueButton);
+		//continueButton.click();
 		softAssert.assertEquals(withdrawAmounterror.getText(), "Enter your amount");
 	}
 
 	public void maxAmountValidation() {
 		withdrawAmount.sendKeys("9999999");
-		continueButton.click();
+		jse.executeScript("arguments[0].click();", continueButton);
 		softAssert.assertEquals(withdrawAmounterror.getText(), "Enter the Amount less than 30000");
 	}
 
 	public void insufficentbalanceAlert() {
 		withdrawAmount.sendKeys("29999");
-		continueButton.click();
+		jse.executeScript("arguments[0].click();", continueButton);
 		softAssert.assertEquals(withdrawAmounterror.getText(), "You do not have sufficient Withdrawable balance.");
 	}
 

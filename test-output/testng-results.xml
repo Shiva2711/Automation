@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5815" started-at="2021-06-28T00:18:37 IST" finished-at="2021-06-28T00:18:43 IST">
+  <suite name="Default suite" duration-ms="39017" started-at="2021-08-13T13:38:39 IST" finished-at="2021-08-13T13:39:18 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5815" started-at="2021-06-28T00:18:37 IST" finished-at="2021-06-28T00:18:43 IST">
-      <class name="com.Practice.collection.MapScenario">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.Practice.collection.MapScenario@7b69c6ba]" name="before" is-config="true" duration-ms="5638" started-at="2021-06-28T00:18:37 IST" finished-at="2021-06-28T00:18:43 IST">
+    <test name="Default test" duration-ms="39017" started-at="2021-08-13T13:38:39 IST" finished-at="2021-08-13T13:39:18 IST">
+      <class name="com.testCases.PracticeBO2_TestCases2">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.testCases.PracticeBO2_TestCases2@55b53d44]" name="before" is-config="true" duration-ms="15674" started-at="2021-08-13T13:38:39 IST" finished-at="2021-08-13T13:38:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.Practice.collection.MapScenario@7b69c6ba]" name="f" duration-ms="131" started-at="2021-06-28T00:18:43 IST" finished-at="2021-06-28T00:18:43 IST">
+        <test-method status="PASS" signature="JoinBO2()[pri:0, instance:com.testCases.PracticeBO2_TestCases2@55b53d44]" name="JoinBO2" duration-ms="22211" started-at="2021-08-13T13:38:54 IST" finished-at="2021-08-13T13:39:17 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- com.Practice.collection.MapScenario -->
+        </test-method> <!-- JoinBO2 -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.testCases.PracticeBO2_TestCases2@55b53d44]" name="after" is-config="true" duration-ms="1036" started-at="2021-08-13T13:39:17 IST" finished-at="2021-08-13T13:39:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- com.testCases.PracticeBO2_TestCases2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

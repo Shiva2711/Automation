@@ -32,7 +32,7 @@ public class streamFilters {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rshiv\\rummyBaaziGit\\lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://courses.rahulshettyacademy.com/courses");
 	}

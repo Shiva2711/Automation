@@ -62,9 +62,10 @@ public class WebTables2 {
 		List<WebElement> rowData = table.findElements(By.xpath("div//div[@class='rt-td' and text()]/parent::div"));
 		
 		for(int i =0; i<rowData.size();i++) {
-			System.out.println("Row Value: " +(i+1));
+			//System.out.println("Row Value: " +(i+1));
 			
 			List<WebElement> colData = rowData.get(i).findElements(By.xpath("div[@class='rt-td' and text()]"));
+			
 			
 			for(int j=0; j<colData.size();j++) {
 			System.out.println("Row: " +(i+1)+ " Coloumn: " +(j+1)+ " data is: " +colData.get(j).getText());

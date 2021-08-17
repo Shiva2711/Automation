@@ -52,7 +52,7 @@ public class lobby_POF {
 	@FindBy(how = How.XPATH, using ="//div[@class='rap_cancel']")
 	private WebElement rap_cancel;
 	
-	@FindBy(how = How.CLASS_NAME, using ="topMenu second")
+	@FindBy(how = How.CSS, using =".topMenu.second")
 	private WebElement SettingsOpen;
 	
 	@FindBy(how = How.CLASS_NAME, using ="topMenu second active")
@@ -61,17 +61,17 @@ public class lobby_POF {
 	@FindBy(how = How.ID, using ="setsoundon_1")
 	private WebElement Sound_ONOFF;
 	
-	@FindBy(how = How.XPATH, using ="//div[@class='settings rebuy-on']")
+	@FindBy(how = How.XPATH, using ="//div[@class='settings rebuy-off']")
 	private WebElement autorebuyON;
 	
-	@FindBy(how = How.XPATH, using ="//div[@class='settings rebuy-off']")
+	@FindBy(how = How.XPATH, using ="//div[@class='settings rebuy-on']")
 	private WebElement autorebuyOFF;
 	
 	@FindBy(how = How.ID, using ="setshowon_1")
 	private WebElement discardonProfile_ONOFF;
 	
 	@FindBy(how = How.XPATH, using ="//input[@name='Helper']")
-	private WebElement Helper_ONOFF;
+	private List<WebElement> Helper_ONOFF;
 	
 	@FindBy(how = How.XPATH, using ="//div[@id='outside_tblmsg']")
 	private WebElement tablemessage;
@@ -91,7 +91,7 @@ public class lobby_POF {
 	@FindBy(how = How.XPATH, using ="//div[@class='emoji_high']")
 	private WebElement firstEmoji;
 	
-	@FindBy(how = How.XPATH, using ="//div[@class='topMenu three']")
+	@FindBy(how = How.ID, using ="leaveButton_1")
 	private WebElement exitTable;
 	
 	@FindBy(how = How.XPATH, using ="//div[@id='CommonErrorcancelButtonWithOk']")
@@ -99,6 +99,9 @@ public class lobby_POF {
 	
 	@FindBy(how = How.XPATH, using ="//div[@id='CommonErrorokButtonWithCancel']")
 	private WebElement exitTable_Ok;
+	
+	@FindBy(how = How.XPATH, using ="//button[@id='instantplay']")
+	private WebElement instantPlay;
 	
 	
 	public WebElement editChips() {
@@ -175,7 +178,7 @@ public class lobby_POF {
 	}
 	
 	public WebElement Helper_ONOFF() {
-		return Helper_ONOFF;
+		return Helper_ONOFF.get(0);
 	}
 	
 	public WebElement tablemessage() {
@@ -212,5 +215,9 @@ public class lobby_POF {
 	
 	public WebElement exitTable_Ok() {
 		return exitTable_Ok;
+	}
+	
+	public WebElement instantPlay() {
+		return instantPlay;
 	}
 }

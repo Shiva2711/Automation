@@ -2,6 +2,7 @@ package com.pageFactory;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,11 @@ import org.testng.asserts.SoftAssert;
 public class profile_POF {
 	public static Logger log = LogManager.getLogger(profile_POF.class.getName());
 	SoftAssert softAssert = new SoftAssert();
+	JavascriptExecutor jse;
 	
 	public profile_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		jse = (JavascriptExecutor)driver;
 	}
 	
 	 @FindBy(how = How.LINK_TEXT, using = "Profile") 
@@ -88,7 +91,8 @@ public class profile_POF {
 	 }
 	 
 	 public void emptyFieldAlert() {
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
+		 //userProfileSubmit.click();
 		 softAssert.assertEquals(fullnameerror.getText(), "Enter Your Full Name");
 		 log.info("Enter Your Full Name Alert Displayed");
 		 
@@ -116,35 +120,35 @@ public class profile_POF {
 	 
 	 public void firstnameValidation(String fullname) {
 		 this.fullname.sendKeys(fullname);
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 		 Assert.assertEquals(fullnameerror.getText(), "Please enter at least 4 characters.");
 		 log.info("Please enter at least 4 characters. Alert Displayed");
 	 }
 	 
 	 public void secondnameValidation(String lastname) {
 		 this.lastname.sendKeys(lastname);
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 		 Assert.assertEquals(lastnameerror.getText(), "Please enter at least 2 characters.");	 
 		 log.info("Please enter at least 2 characters. Alert Displayed");
 	 }
 	 
 	 public void address1Validation(String address1) {
 		 this.address1.sendKeys(address1);
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 		 Assert.assertEquals(address1error.getText(), "Please enter at least 4 characters.");	
 		 log.info("Please enter at least 4 characters. Alert Displayed");
 	 }
 	 
 	 public void address2Validation(String address2) {
 		 this.address2.sendKeys(address2);
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 		 Assert.assertEquals(address2error.getText(), "Please enter at least 4 characters.");	 
 		 log.info("Please enter at least 4 characters. Alert Displayed");
 	 }
 	 
 	 public void pincodeValidation(String pincode) {
 		 this.pincode.sendKeys(pincode);
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 		 Assert.assertEquals(pincodeerror.getText(), "Minimum 6 digit pincode");
 		 log.info("Minimum 6 digit pincode Alert Displayed");
 	 }
@@ -201,7 +205,7 @@ public class profile_POF {
 	 }
 	 
 	 public void submitProfile() {
-		 userProfileSubmit.click();
+		 jse.executeScript("arguments[0].click();", userProfileSubmit);
 	 }
 	 
 	 public void softAssertAll() {

@@ -15,6 +15,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -42,6 +43,7 @@ public class base {
 
 		String drivername = prop.getProperty("driver");
 		log.info(drivername);
+	
 
 		if (browserName.equals("chrome") && drivername.equals("hub")) {
 			dc.setBrowserName("chrome");
@@ -52,6 +54,14 @@ public class base {
 
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
 			driver = new ChromeDriver();
+		}
+		
+		else if(browserName.equals("chrome options")) {
+
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
+			ChromeOptions op = new ChromeOptions();
+			op.setExperimentalOption("debuggerAddress", "localhost:9222");
+			driver = new ChromeDriver(op);
 		}
 
 		else if (browserName.equals("firefox") && drivername.equals("hub")) {
@@ -76,7 +86,7 @@ public class base {
 
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		return driver;
 
 	}

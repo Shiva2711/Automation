@@ -2,11 +2,16 @@ package com.Practice.collection;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class arrayList {
 
 	public static void main(String[] args) {
 		
 		ArrayList<String> a = new ArrayList<String>();
+		WebDriver driver;
 		
 		a.add("Ramu");
 		a.add("Kamu");

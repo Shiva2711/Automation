@@ -1,17 +1,15 @@
 package com.testCases;
 
-import java.awt.Window;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -20,8 +18,6 @@ import org.testng.annotations.Test;
 import com.pageFactory.lobby_POF;
 import com.pageFactory.login_POF;
 import com.resources.base;
-
-import okio.Timeout;
 
 public class JoinTournament_TestCases extends base {
 	public WebDriver driver;
@@ -44,13 +40,16 @@ public class JoinTournament_TestCases extends base {
 	}
 
 	@Test
-	public void test() throws InterruptedException {
+	public void JoinTournament() throws InterruptedException {
 
 		Lobby_TC = new lobby_POF(driver);
 
-		driver.get("https://preprodoptsite.rummybaazi.com//lobby/index.html?v=1621244149659#!/app/lobby");
-
-		Thread.sleep(16000);
+		driver.get(prop.getProperty("Lobby"));
+		log.info("Open Lobby URL");
+		
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+		
 
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
@@ -59,26 +58,35 @@ public class JoinTournament_TestCases extends base {
 		String promotion = it.next();
 
 		driver.switchTo().window(promotion).close();
+		log.info("Close Promotion Window");
 
 		driver.switchTo().window(Lobby);
+		log.info("Switch to Lobby Window");
 
 		Lobby_TC.tournament().click();
+		log.info("Click on Lobby Window");
 		
 
 		Lobby_TC.tourname().stream().filter(s -> s.getText().contains("1K Free Entry")).map(s -> joinTour(s))
 				.forEach(s -> s.click());
+		log.info("Search and Select 1K Free Entery Tournament");
 
 
 		Lobby_TC.register().click();
+		log.info("Click on Register");
 
 		Lobby_TC.reg_Ok().click();
+		log.info("Click on Register Okay button");
 		
 		Lobby_TC.tourname().stream().filter(s -> s.getText().contains("1K Free Entry")).map(s -> joinTour(s))
 		.forEach(s -> s.click());
+		log.info("Search and Select 1K Free Entery Tournament");
 
 		Lobby_TC.withdraw().click();
+		log.info("Click on Withdraw");
 
 		Lobby_TC.with_Ok().click();
+		log.info("Click on Withdraw Okay button");
 
 	}
 

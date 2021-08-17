@@ -1,7 +1,9 @@
 package com.pageFactory;
 
+import org.apache.poi.ss.util.NumberToTextConverter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -11,9 +13,13 @@ import org.testng.asserts.SoftAssert;
 public class deposit_POF {
 	
 	SoftAssert softAssert = new SoftAssert();
+	Actions actions ;
+
+	
 	
 	public deposit_POF(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		actions = new Actions(driver);
 	}
 
 	@FindBy(how = How.LINK_TEXT, using = "Deposit")
@@ -48,20 +54,23 @@ public class deposit_POF {
 	}
 	public void emptyfiledClick( ) {
 		
-		addCash.click();
+		actions.moveToElement(addCash).click().perform();
+		//addCash.click();
 		softAssert.assertEquals(userAmounterror.getText(), "Enter the Amount");
 		softAssert.assertEquals(agreeerror.getText(), "Please agree terms & condition");
 	}
 	
 	public void maxamountValidation ( ) {
 		userAmount.sendKeys("100000");
-		addCash.click();
+		actions.moveToElement(addCash).click().perform();
+		//addCash.click();
 		softAssert.assertEquals(userAmounterror.getText(), "Enter the Amount less than 50000.00"); //pro = 50000.00, preprod = 1000.00
 	}
 	
 	public void invalidBonusCode() {
 		user_bonus_code.sendKeys("DemoDemo");
-		addCash.click();
+		actions.moveToElement(addCash).click().perform();
+		//addCash.click();
 		softAssert.assertEquals(user_bonus_codeerror.getText(), "Bonus code is not valid");
 		
 	}
@@ -74,7 +83,8 @@ public class deposit_POF {
 		this.userAmount.sendKeys(userAmount);
 		paymentType.click();
 		agree.click();
-		addCash.click();
+		actions.moveToElement(addCash).click().perform();
+		//addCash.click();
 		
 	}
 	

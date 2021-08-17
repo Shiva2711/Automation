@@ -51,7 +51,6 @@ public class arrayList {
 		names.add("Kavitha");
 
 		long c = names.stream().filter(s -> s.startsWith("A")).count();
-
 		System.out.println(c);
 
 		long d = Stream.of("Ashok", "Jeevitha", "Sanjay", "Arjun", "Kavitha").filter(s -> {
@@ -88,7 +87,7 @@ public class arrayList {
 
 	}
 
-	@Test
+	//@Test
 	public void streamCollect() {
 		List<String> ls = Stream.of("Ashok", "Jeevitha", "Sanjay", "Arjun", "Kavitha").filter(s -> s.endsWith("a"))
 				.map(s -> s.toUpperCase()).collect(Collectors.toList());
