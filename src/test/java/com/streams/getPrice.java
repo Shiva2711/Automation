@@ -29,7 +29,7 @@ public class getPrice {
 		action.moveToElement(mobandTAB).build().perform();
 
 		WebElement Smartphones = driver.findElement(By.xpath("//span[text() ='Smartphones']"));
-		Smartphones.click();
+		Smartphones.click();		
 
 		
 		  WebElement sort = driver.findElement(By.

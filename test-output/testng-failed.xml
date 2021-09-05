@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testCases.PracticeBO2_TestCases2">
+      <class name="com.Practice.testNGskip">
         <methods>
-          <include name="before"/>
-          <include name="after"/>
-          <include name="JoinBO2"/>
+          <include name="f2"/>
         </methods>
-      </class> <!-- com.testCases.PracticeBO2_TestCases2 -->
+      </class> <!-- com.Practice.testNGskip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

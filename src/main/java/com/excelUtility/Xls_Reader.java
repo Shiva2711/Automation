@@ -20,7 +20,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Xls_Reader {
-	public String path; //string path
+	public String path; //string path ertretret
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut = null;
 	private XSSFWorkbook workbook = null;
