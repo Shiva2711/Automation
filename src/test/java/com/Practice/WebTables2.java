@@ -11,18 +11,22 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class WebTables2 {
 
 	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver1 = new ChromeDriver();
-		System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
+		//System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
 		
-		driver1.get("https://www.demoqa.com/webtables");
+		driver1.get("https://demoqa.com/webtables");
 		
 		List<WebElement> lastname = driver1.findElements(By.xpath("//div[@role='gridcell'][2]"));
 		
 		List<String> Age = lastname.stream().filter(s->s.getText().contains("Cantrell")).map(s->getAge(s)).collect(Collectors.toList());
 		Age.stream().forEach(s->System.out.println(s));
+		System.out.println(Age);
 		
 		driver1.close();
 	}
@@ -36,11 +40,11 @@ public class WebTables2 {
 	@BeforeTest
 	public void before() {
 
-		
-		System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
+		//System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
 		
 		driver = new ChromeDriver();
-		driver.get("https://www.demoqa.com/webtables");
+		driver.get("https://demoqa.com/webtables");
 	}
 	
 	//@Test

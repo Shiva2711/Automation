@@ -27,7 +27,7 @@ public class arrayList {
 		
 		System.out.println(a.get(1));
 		
-		System.out.println(a.contains("somu"));
+		System.out.println(a.contains("Somu"));
 		
 		System.out.println(a.isEmpty());
 		

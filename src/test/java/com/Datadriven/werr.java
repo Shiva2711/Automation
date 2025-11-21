@@ -14,48 +14,52 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class werr {
-	
-	public static ArrayList<String> dd( ) throws IOException {
-		
+
+	public static ArrayList<String> dd() throws IOException {
+
 		ArrayList<String> a = new ArrayList<>();
-		
-		FileInputStream fis = new FileInputStream("C:\\Users\\rshiv\\git\\RummyBaaziProject\\data\\TestData.xlsx");
-		
+
+		FileInputStream fis = new FileInputStream("C:\\Users\\rshiv\\git\\AutomationProject\\data\\TestData.xlsx");
+
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		
+
 		int sheets = workbook.getNumberOfSheets();
-		
-		for(int i =0; i<=sheets; i++) {
-		
-		if(workbook.getSheetName(i).equalsIgnoreCase("sheet1")) {
-			
-			XSSFSheet sheet = workbook.getSheetAt(i);
-			
-			Iterator<Row> row = sheet.iterator();
-			
-			row.next();
-			
-			Row r = row.next();
-			
-			Iterator<Cell> cell =r.cellIterator();
-			
-			Cell c =cell.next();
-			
-			if (c.getCellType() == CellType.STRING) {
-				
-				a.add(c.getStringCellValue());		
+
+		for (int i = 0; i < sheets; i++) {
+
+			if (workbook.getSheetName(i).equalsIgnoreCase("Sheet1")) {
+
+				XSSFSheet sheet = workbook.getSheetAt(i);
+
+				Iterator<Row> row = sheet.iterator();
+
+				row.next();
+
+				Row r = row.next();
+
+				Iterator<Cell> cell = r.cellIterator();
+
+				while (cell.hasNext()) {
+
+					Cell c = cell.next();
+
+					if (c.getCellType() == CellType.STRING) {
+
+						a.add(c.getStringCellValue());
+					}
+
+					else
+						a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
+				}
 			}
-			
-			else a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
 		}
-	}
 		return a;
 	}
-	
+
 	public static void main(String args[]) throws IOException {
-		
-		werr.dd().stream().forEach(s->System.out.println(s));
-		
+
+		werr.dd().stream().forEach(s -> System.out.println(s));
+
 	}
 
 }

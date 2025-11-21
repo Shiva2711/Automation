@@ -1,6 +1,6 @@
 package com.Practice;
 
-class Count
+class CountUpperLowerNumberSpecial_InString
 {
     public static void main(String args[])
     {

@@ -10,7 +10,7 @@ import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 
 public class substringOccurance {
 	
-	//@Test
+	@Test
 	public void f() {
 		
 		String Text ="adsfsivawerewrsivaerwerewsivawerersivaaqreqwr";
@@ -18,6 +18,7 @@ public class substringOccurance {
 		
 		//int Count = StringUtils.countMatches(Text, str);
 		//System.out.println(count);
+		System.out.println(countMatches(Text, str));
 		
 	}
 	
@@ -27,7 +28,7 @@ public class substringOccurance {
 		
 	}
 	
-	@Test
+	//@Test
 	public void f1() {
 		String text ="adsfsivawerewrsivaerwerewsivawerersivaaqreqwrsivasivasiva";
 		String str ="siva";

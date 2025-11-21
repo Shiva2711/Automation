@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Practice.testNGskip">
+      <class name="com.Practice.brokenLinks">
         <methods>
-          <include name="f2"/>
+          <include name="afterTest"/>
+          <include name="f1"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.Practice.testNGskip -->
+      </class> <!-- com.Practice.brokenLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

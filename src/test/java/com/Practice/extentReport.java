@@ -1,4 +1,6 @@
-package com.Practice;
+	package com.Practice;
+
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -43,6 +45,7 @@ public class extentReport {
 		driver.get("hhtps://www.rummybazzi.com");
 		System.out.println(driver.getTitle());
 		driver.close();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		test.fail("Result do not match");
 		extent.flush();
 	}

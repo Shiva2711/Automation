@@ -15,7 +15,7 @@ class primeNumber {
 			if (count == 2) {
 				
 				primeNumbers = primeNumbers + i + " ";  // Appended the Prime number to the String
-				System.out.println(i);
+				//System.out.println(i);
 			}
 		}
 		System.out.println("Prime numbers from 200 to 400 are :");

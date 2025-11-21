@@ -17,7 +17,6 @@ import org.testng.annotations.Test;
 public class testNGskip {
 	
 	
-	
 	public WebDriver driver;
 	
 	@Test (enabled = false)
