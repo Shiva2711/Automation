@@ -32,7 +32,7 @@ public class Selenium_WaitType {
 				.pollingEvery(Duration.ofSeconds(2))
 				.ignoring(NoSuchElementException.class);
 		
-		WebElement element = wait.until(driver1->driver1.findElement(By.id("username")));
+		WebElement element = fwait.until(driver1->driver1.findElement(By.id("username")));
 
 	}
 

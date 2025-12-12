@@ -14,7 +14,6 @@ public class SwapToString {
 		a = a.substring(b.length());
 		
 		System.out.println("After Swaping a="+a+" b="+b);
-		
 
 	}
 
