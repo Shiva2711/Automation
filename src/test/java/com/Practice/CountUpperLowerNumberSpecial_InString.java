@@ -2,7 +2,7 @@ package com.Practice;
 
 class CountUpperLowerNumberSpecial_InString
 {
-    public static void main(String args[])
+    public static void main(String args[]) 
     {
         String str = "#GeeKs01fOr@gEEks07";
         int upper = 0, lower = 0, number = 0, special = 0;
